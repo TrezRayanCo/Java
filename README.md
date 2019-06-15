@@ -80,8 +80,9 @@
 
 نمونه کد فراخوانی:
 
+```
 raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTimeMillis() / 1000L);
-
+```
 **ملاحضات:**
 
 در صورتی که تاریخ ارسال، از تاریخ فعلی کمتر باشد یا به عبارتی دیگر از زمان مورد نظر عبور کرده باشید، پیام مورد نظر در لحظه ارسال خواهد شد.
@@ -98,8 +99,9 @@ raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTi
 
 نمونه کد فراخوانی:
 
+```
 raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID);
-
+```
 
 
 ارسال پیام به پورت خاص ( **متد**  **SendMessageToPort** )
@@ -115,9 +117,9 @@ raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID)
 | recipientsMessage | RecipientsMessage[] | آرایه ای از شماره ها و پیام های متناظر |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.SendMessageToPort(PhoneNumber, PORT, PORT, UserGroupID, recipientsMessages);
-
+```
 مشاهده وضعیت ارسال پیام گروهی ( **متد**  **GroupMessageStatus** )
 
 از این متد برای واکشی، وضعیت لیست پیام های ارسالی استفاده می شود.
@@ -127,9 +129,9 @@ raygansms.SendMessageToPort(PhoneNumber, PORT, PORT, UserGroupID, recipientsMess
 | groupMessageId | String | شناسه گروه ارسال پیام |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.GroupMessageStatus(UserGroupID);
-
+```
 مشاهده وضعیت ارسال پیام متناظر ( **متد**  **CorrespondingMessageStatus** )
 
 از این متد برای واکشی ، وضعیت لیست پیام های ارسالی استفاده می شود.
@@ -139,9 +141,9 @@ raygansms.GroupMessageStatus(UserGroupID);
 | messageId | String[] | شناسه گروه ارسال پیام |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.CorrespondingMessageStatus(MessageIDs);
-
+```
 دریافت شناسه گروه پیام ( **متد**  **GetGroupMessageId** )
 
 از این متد برای دریافت ، شناسه گروه پیام ارسالی استفاده می شود.
@@ -151,9 +153,9 @@ raygansms.CorrespondingMessageStatus(MessageIDs);
 | groupId | String | شناسه ارسال پیام کاربر |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.GetGroupMessageId(UserGroupID);
-
+```
 پیام های دریافتی ( **متد**  **ReceiveMessages** )
 
 از این متد برای واکشی ، لیست پیام های در یافتی استفاده می شود.
@@ -166,25 +168,25 @@ raygansms.GetGroupMessageId(UserGroupID);
 | page | int | شماره صفحه |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.ReceiveMessages(PhoneNumber, (System.currentTimeMillis() - (60 \* 60 \* 24 \* 60)) / 1000L,System.currentTimeMillis() / 1000L, 1);
-
+```
 دریافت اعتبار ( **متد**  **GetCredit** )
 
 از این متد برای واکشی ، اعتبار کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
-
+```
 raygansms.GetCredit();
-
+```
 قیمت پیامک ( **متد**  **GetPrices** )
 
 از این متد برای واکشی تعرفه ارسال پیامک توسط کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
-
+```
 raygansms.GetPrices();
-
+```
 بررسی شماره ها در لیست سیاه ( **متد**  **ShowWhiteList** )
 
 خروجی متد زیر لیست شماره موبایل هایی است که در لیست سیاه قرار ندارند.
@@ -194,9 +196,9 @@ raygansms.GetPrices();
 | Mobiles | String[] | لیستی از شماره موبایل ها برای بررسی |
 
 نمونه کد فراخوانی:
-
+``````
 raygansms.ShowWhiteList(Mobiles);
-
+```
 تفسیر کد های خروجی
 
 | نوع ResultCode | کد خطا | توضیح خطا |
