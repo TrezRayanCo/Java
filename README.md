@@ -196,7 +196,7 @@ raygansms.GetPrices();
 | Mobiles | String[] | لیستی از شماره موبایل ها برای بررسی |
 
 نمونه کد فراخوانی:
-``````
+```
 raygansms.ShowWhiteList(Mobiles);
 ```
 تفسیر کد های خروجی
