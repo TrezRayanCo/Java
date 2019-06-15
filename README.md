@@ -197,7 +197,9 @@ raygansms.GetPrices();
 
 نمونه کد فراخوانی:
 
+| --- | --- | --- |
 raygansms.ShowWhiteList(Mobiles);
+| --- | --- | --- |
 
 تفسیر کد های خروجی
 
