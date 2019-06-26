@@ -1,5 +1,7 @@
 <div dir="rtl" >
+        
 **باسمه تعالی**
+        
 در ابتدا کتابخانه را به پروژه خود اضافه کنید. برای استفاده از کتابخانه فایل jar  را همراه با کتابخانه گوگل gson به پروژه تان اضافه کنید.
 
 حالا می‌توانید در پروژه جاوایی تان از آن استفاده کنید.
@@ -13,7 +15,7 @@
 **مقدار برگشتی متدها (شی** **Result)**
 
 متدهای دیگر کتابخانه (به غیر از getAuthHeader ) از این نوع بر می گردانند. این نوع شامل سه متغییر است. یکی Code از نوع ResultCode و بیانگر موفقیت آمیز بودن عملیات یا شماره خطا است. نوع Message متن نتیجه را مشخص می کند. نوع Result نتیجه مربوط به متد را مشخص می‌کند و می‌تواند عدد، رشته و از نوع JSON باشد.
-<div>
+</div>
 
 
 | نام پارامتر | نوع پارامتر | توضیحات |
@@ -22,8 +24,10 @@
 | Message | String | متن نتیجه عملیات |
 | Result | JsonElement | اطلاعات دیگر عملیات درخواستی |
 
+<div dir="rtl" >
 در کد زیر نمونه کدی برای دریافت اعتبار حساب استفاده شده است. دقت کنید برای اجرا شما باید از کلاس Raygansms یک متغیر ایجاد کرده و متد مربوط به اجرا را در کد فرابخوانید. نتیجه مورد بدست آمده  را بررسی کرده و بر اساس خروجی نتیجه مورد نیاز را به کاربر نمایش دهید. برای نمونه کد زیر را مشاهده کنید.
-
+</div>
+        
 ```
 **private** Raygansms **raygansms** = **new** Raygansms( **&quot;username&quot;** , **&quot;password&quot;** );
 
@@ -64,6 +68,7 @@
 }
 ```
 
+<div dir="rtl" >
 در ادامه متدهای کتابخانه را شرح می دهیم.
 
 ارسال پیام
@@ -71,6 +76,8 @@
 ارسال پیام گروهی ( **متد**  **SendMessage** )
 
 از این متد برای ارسال پیام گروهی استفاده می شود. بدیهی است از این پیام برای ارسال پیام تکی نیز میتوان استفاده نمود.
+</div>
+
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
@@ -80,11 +87,15 @@
 | UserGroupID | String | گروه پیام |
 | SendDateInTimeStamp | Long | تاریخ ارسال پیام به صورتTimeStamp  (به ثانیه) |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
-
+</div>
+        
 ```
 raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTimeMillis() / 1000L);
 ```
+
+<div dir="rtl" >
 **ملاحضات:**
 
 در صورتی که تاریخ ارسال، از تاریخ فعلی کمتر باشد یا به عبارتی دیگر از زمان مورد نظر عبور کرده باشید، پیام مورد نظر در لحظه ارسال خواهد شد.
@@ -92,6 +103,8 @@ raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTi
 ارسال پیام متناظر ( **متد**  **SendCorrespondingMessage** )
 
 از این متد برای ارسال پیام متناظر استفاده می شود.
+</div>
+        
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
@@ -99,17 +112,20 @@ raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTi
 | recipientsMessage | RecipientsMessage[] | آرایه ای از شماره ها و پیام های متناظر |
 | UserGroupID | String | گروه پیام |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
-
+</div>
+        
 ```
 raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID);
 ```
 
-
+<div dir="rtl" >
 ارسال پیام به پورت خاص ( **متد**  **SendMessageToPort** )
 
 از این متد برای ارسال پیام به پورت خاص استفاده می شود.
-
+</div>
+        
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | phoneNumber | String | شماره اختصاصی |
@@ -118,6 +134,7 @@ raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID)
 | UserGroupID | String | گروه پیام |
 | recipientsMessage | RecipientsMessage[] | آرایه ای از شماره ها و پیام های متناظر |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
 ```
 raygansms.SendMessageToPort(PhoneNumber, PORT, PORT, UserGroupID, recipientsMessages);
