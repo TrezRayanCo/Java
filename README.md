@@ -28,7 +28,7 @@
 در کد زیر نمونه کدی برای دریافت اعتبار حساب استفاده شده است. دقت کنید برای اجرا شما باید از کلاس Raygansms یک متغیر ایجاد کرده و متد مربوط به اجرا را در کد فرابخوانید. نتیجه مورد بدست آمده  را بررسی کرده و بر اساس خروجی نتیجه مورد نیاز را به کاربر نمایش دهید. برای نمونه کد زیر را مشاهده کنید.
 </div>
         
-```
+```java
 **private** Raygansms **raygansms** = **new** Raygansms( **&quot;username&quot;** , **&quot;password&quot;** );
 
 **private** String[] **Mobiles** = { **&quot;09120000000&quot;** , **&quot;09120000001&quot;** };
@@ -91,7 +91,7 @@
 نمونه کد فراخوانی:
 </div>
         
-```
+```javascript
 raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTimeMillis() / 1000L);
 ```
 
@@ -116,7 +116,7 @@ raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTi
 نمونه کد فراخوانی:
 </div>
         
-```
+```javascript
 raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID);
 ```
 
@@ -136,7 +136,8 @@ raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID)
 
 <div dir="rtl" >
 نمونه کد فراخوانی:
-```
+        
+```javascript
 raygansms.SendMessageToPort(PhoneNumber, PORT, PORT, UserGroupID, recipientsMessages);
 ```
 مشاهده وضعیت ارسال پیام گروهی ( **متد**  **GroupMessageStatus** )
@@ -148,7 +149,8 @@ raygansms.SendMessageToPort(PhoneNumber, PORT, PORT, UserGroupID, recipientsMess
 | groupMessageId | String | شناسه گروه ارسال پیام |
 
 نمونه کد فراخوانی:
-```
+
+```javascript
 raygansms.GroupMessageStatus(UserGroupID);
 ```
 مشاهده وضعیت ارسال پیام متناظر ( **متد**  **CorrespondingMessageStatus** )
@@ -160,7 +162,8 @@ raygansms.GroupMessageStatus(UserGroupID);
 | messageId | String[] | شناسه گروه ارسال پیام |
 
 نمونه کد فراخوانی:
-```
+
+```javascript
 raygansms.CorrespondingMessageStatus(MessageIDs);
 ```
 دریافت شناسه گروه پیام ( **متد**  **GetGroupMessageId** )
@@ -172,7 +175,8 @@ raygansms.CorrespondingMessageStatus(MessageIDs);
 | groupId | String | شناسه ارسال پیام کاربر |
 
 نمونه کد فراخوانی:
-```
+
+```javascript
 raygansms.GetGroupMessageId(UserGroupID);
 ```
 پیام های دریافتی ( **متد**  **ReceiveMessages** )
@@ -187,7 +191,8 @@ raygansms.GetGroupMessageId(UserGroupID);
 | page | int | شماره صفحه |
 
 نمونه کد فراخوانی:
-```
+
+```javascript
 raygansms.ReceiveMessages(PhoneNumber, (System.currentTimeMillis() - (60 \* 60 \* 24 \* 60)) / 1000L,System.currentTimeMillis() / 1000L, 1);
 ```
 دریافت اعتبار ( **متد**  **GetCredit** )
@@ -195,7 +200,8 @@ raygansms.ReceiveMessages(PhoneNumber, (System.currentTimeMillis() - (60 \* 60 \
 از این متد برای واکشی ، اعتبار کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
-```
+
+```javascript
 raygansms.GetCredit();
 ```
 قیمت پیامک ( **متد**  **GetPrices** )
@@ -203,7 +209,8 @@ raygansms.GetCredit();
 از این متد برای واکشی تعرفه ارسال پیامک توسط کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
-```
+
+```javascript
 raygansms.GetPrices();
 ```
 بررسی شماره ها در لیست سیاه ( **متد**  **ShowWhiteList** )
@@ -216,7 +223,7 @@ raygansms.GetPrices();
 
 نمونه کد فراخوانی:
 
----
+---javascript
 raygansms.ShowWhiteList(Mobiles);
 ---
 
