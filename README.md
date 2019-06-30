@@ -223,9 +223,9 @@ raygansms.GetPrices();
 
 نمونه کد فراخوانی:
 
----javascript
+```javascript
 raygansms.ShowWhiteList(Mobiles);
----
+```
 
 تفسیر کد های خروجی
 
